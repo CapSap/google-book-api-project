@@ -1,8 +1,37 @@
-#container {
-  display: flex;
-  flex-wrap: wrap;
+#page-container {
+  display: grid;
+  grid-template-columns: repeat((4, 1fr));
 }
-
 .card {
   border: 2px solid blue;
+  &__imgTitle {
+    display: grid;
+    grid-template-columns: 200px, 1fr;
+    & img {
+      grid-row-end: span 2;
+    }
+    & p {
+      margin: 0;
+      padding: 0;
+      font-size: 1.4em;
+      font-weight: bold;
+      grid-column-start: 2;
+    }
+  }
+
+  & > p {
+    padding: 20px;
+    color: blue;
+
+    // how to Truncating Multiple Line Text
+    //https://css-tricks.com/line-clampin/
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+}
+
+.form {
+  grid-column: 1 / span 2;
 }

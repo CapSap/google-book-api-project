@@ -1,10 +1,36 @@
-#container {
-  display: flex;
-  flex-wrap: wrap;
+#page-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .card {
   border: 2px solid blue;
+}
+.card__imgTitle {
+  display: grid;
+  grid-template-columns: 200px, 1fr;
+}
+.card__imgTitle img {
+  grid-row-end: span 2;
+}
+.card__imgTitle p {
+  margin: 0;
+  padding: 0;
+  font-size: 1.4em;
+  font-weight: bold;
+  grid-column-start: 2;
+}
+.card > p {
+  padding: 20px;
+  color: blue;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.form {
+  grid-column: 1/span 2;
 }
 
 /*# sourceMappingURL=style.css.map */

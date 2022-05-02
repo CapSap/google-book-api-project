@@ -1,4 +1,4 @@
-const container = document.querySelector("#container");
+const container = document.querySelector("#page-container");
 
 console.log(container);
 /*
@@ -23,11 +23,15 @@ const createCard = (object) => {
   imgEl.src = imgLink;
 
   const cardContainer = createHTML("div", "");
-  cardContainer.append(createHTML("p", object.volumeInfo.title));
-  cardContainer.append(imgEl);
-  cardContainer.append(createHTML("p", object.volumeInfo.authors));
-  cardContainer.append(createHTML("p", object.volumeInfo.description));
+  const cardContainer__imgTitle = createHTML("div", "");
+  cardContainer__imgTitle.append(imgEl);
 
+  cardContainer__imgTitle.append(createHTML("p", object.volumeInfo.title));
+  cardContainer__imgTitle.append(createHTML("p", object.volumeInfo.authors));
+  cardContainer__imgTitle.className = "card__imgTitle";
+  cardContainer.append(cardContainer__imgTitle);
+
+  cardContainer.append(createHTML("p", object.volumeInfo.description));
   cardContainer.className = "card";
 
   return cardContainer;
