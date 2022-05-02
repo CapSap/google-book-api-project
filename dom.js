@@ -17,9 +17,14 @@ const createHTML = (element, text) => {
   return returnElement;
 };
 const createCard = (object) => {
+  // creating image element
+  const imgEl = document.createElement("img");
+  const imgLink = object.volumeInfo.imageLinks.thumbnail;
+  imgEl.src = imgLink;
+
   const cardContainer = createHTML("div", "");
   cardContainer.append(createHTML("p", object.volumeInfo.title));
-  cardContainer.append(createHTML("p", object.volumeInfo.imageLinks.thumbnail));
+  cardContainer.append(imgEl);
   cardContainer.append(createHTML("p", object.volumeInfo.authors));
   cardContainer.append(createHTML("p", object.volumeInfo.description));
 
