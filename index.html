@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Google Book Getter</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./script.js" defer></script>
+    <script type="module" src="./api.js" defer></script>
+    <script type="module" src="./dom.js" defer></script>
   </head>
   <body>
     <div>
       <h2>Book Getter</h2>
-      <form id="searchForm">
-        <input type="text" />
+      <form id="bookSearchForm">
+        <input type="text" name="userInput" />
         <button type="submit">Get Books</button>
       </form>
+      <div id="container">Book search results</div>
     </div>
   </body>
 </html>
