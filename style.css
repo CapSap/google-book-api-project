@@ -16,12 +16,15 @@
 .card__imgTitle p {
   margin: 0;
   padding: 0;
-  font-size: 1.4em;
+  font-size: 1.2em;
   font-weight: bold;
   grid-column-start: 2;
 }
+.card__imgTitle p + p {
+  font-weight: normal;
+  font-style: italic;
+}
 .card > p {
-  padding: 20px;
   color: blue;
   overflow: hidden;
   display: -webkit-box;

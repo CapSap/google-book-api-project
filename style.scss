@@ -13,14 +13,18 @@
     & p {
       margin: 0;
       padding: 0;
-      font-size: 1.4em;
+      font-size: 1.2em;
       font-weight: bold;
       grid-column-start: 2;
+
+      & + p {
+        font-weight: normal;
+        font-style: italic;
+      }
     }
   }
 
   & > p {
-    padding: 20px;
     color: blue;
 
     // how to Truncating Multiple Line Text
