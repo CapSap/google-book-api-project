@@ -4,16 +4,21 @@
 }
 .card {
   border: 2px solid blue;
+  text-align: center;
+  // height: 600px;
+  width: 600px;
   &__imgTitle {
     display: grid;
     grid-template-columns: 200px, 1fr;
+    font-size: 1.2em;
     & img {
       grid-row-end: span 2;
+      width: 200px;
     }
     & p {
       margin: 0;
       padding: 0;
-      font-size: 1.2em;
+      font-size: 1.7em;
       font-weight: bold;
       grid-column-start: 2;
 
@@ -26,16 +31,31 @@
 
   & > p {
     color: blue;
+    font-size: 2em;
 
     // how to Truncating Multiple Line Text
     //https://css-tricks.com/line-clampin/
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
   }
 }
 
-.form {
+.form-container {
   grid-column: 1 / span 2;
+
+  &__heading {
+    font-size: 4em;
+  }
+}
+
+.form {
+  font-size: 2em;
+  &__input {
+    font-size: 1.5em;
+  }
+  &__button {
+    font-size: 1.5em;
+  }
 }
