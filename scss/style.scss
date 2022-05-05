@@ -1,0 +1,8 @@
+@use "form_container";
+@use "card";
+
+#page-container {
+  display: grid;
+  grid-template-columns: repeat((4, 1fr));
+  font-family: "Courier New", Courier, monospace;
+}

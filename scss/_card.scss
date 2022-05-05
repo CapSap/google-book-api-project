@@ -1,10 +1,5 @@
-#page-container {
-  display: grid;
-  grid-template-columns: repeat((4, 1fr));
-  font-family: "Courier New", Courier, monospace;
-}
 .card {
-  border: 2px solid blue;
+  border: 2px solid rgb(255, 230, 0);
   text-align: center;
   // height: 600px;
   width: 600px;
@@ -40,23 +35,5 @@
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-  }
-}
-
-.form-container {
-  grid-column: 1 / span 2;
-
-  &__heading {
-    font-size: 4em;
-  }
-}
-
-.form {
-  font-size: 2em;
-  &__input {
-    font-size: 1.5em;
-  }
-  &__button {
-    font-size: 1.5em;
   }
 }

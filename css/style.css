@@ -1,11 +1,22 @@
-#page-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  font-family: "Courier New", Courier, monospace;
+.form-container {
+  grid-column: 1/span 2;
+}
+.form-container__heading {
+  font-size: 4em;
+}
+
+.form {
+  font-size: 2em;
+}
+.form__input {
+  font-size: 1.5em;
+}
+.form__button {
+  font-size: 1.5em;
 }
 
 .card {
-  border: 2px solid blue;
+  border: 2px solid rgb(255, 230, 0);
   text-align: center;
   width: 600px;
 }
@@ -38,21 +49,10 @@
   -webkit-box-orient: vertical;
 }
 
-.form-container {
-  grid-column: 1/span 2;
-}
-.form-container__heading {
-  font-size: 4em;
-}
-
-.form {
-  font-size: 2em;
-}
-.form__input {
-  font-size: 1.5em;
-}
-.form__button {
-  font-size: 1.5em;
+#page-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  font-family: "Courier New", Courier, monospace;
 }
 
 /*# sourceMappingURL=style.css.map */
