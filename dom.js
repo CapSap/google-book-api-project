@@ -20,6 +20,11 @@ const createHTML = (element, text, attr) => {
 };
 
 const createCard = (object) => {
+  const defaultDescription =
+    object.volumeInfo.description === undefined
+      ? "Google has no description for the book so instead I want to take advantage to advocate for nuclear power. Australia has a ban on nuclear energy so we export the raw material instead of doing anything useful with it. It is as carbon neutral as renewable energy. It is reliable source of energy which is important when contrasted with intermittent sources. Modern economies need reliable power. There is a lot more to say on this topic  "
+      : object.volumeInfo.description;
+
   const cardContainer = createHTML("div", "", { className: "card" });
   const cardContainer__imgTitle = createHTML("div", "", {
     className: "card__imgTitle",
@@ -40,7 +45,7 @@ const createCard = (object) => {
   cardContainer.append(cardContainer__imgTitle);
 
   cardContainer.append(
-    createHTML("p", object.volumeInfo.description, {
+    createHTML("p", defaultDescription, {
       className: "card__description",
     })
   );
