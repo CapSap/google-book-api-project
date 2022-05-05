@@ -2,7 +2,11 @@
   grid-column: 1 / span 2;
 
   &__heading {
-    font-size: 4em;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 6em;
+  }
+  &__para {
+    font-size: 2em;
   }
 }
 

@@ -30,7 +30,9 @@
   &__description {
     color: blue;
     font-size: 2em;
-
+    background-color: aliceblue;
+    padding: 0px 40px;
+    text-align: center;
     // how to Truncating Multiple Line Text
     //https://css-tricks.com/line-clampin/
     overflow: hidden;
