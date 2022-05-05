@@ -29,19 +29,24 @@ const createCard = (object) => {
     src: object.volumeInfo.imageLinks.thumbnail,
   });
   cardContainer__imgTitle.append(imgEl2);
-
-  cardContainer__imgTitle.append(createHTML("p", object.volumeInfo.title));
-  cardContainer__imgTitle.append(createHTML("p", object.volumeInfo.authors));
+  cardContainer__imgTitle.append(
+    createHTML("p", object.volumeInfo.title, { className: "card__title" })
+  );
+  cardContainer__imgTitle.append(
+    createHTML("p", object.volumeInfo.authors, { className: "card__authors" })
+  );
   cardContainer.append(cardContainer__imgTitle);
 
-  cardContainer.append(createHTML("p", object.volumeInfo.description));
+  cardContainer.append(
+    createHTML("p", object.volumeInfo.description, {
+      className: "card__description",
+    })
+  );
 
   return cardContainer;
 };
 
 export const insertDataIntoDom = (array) => {
-  // array.map((x) => container.append(createHTML("p", x.volumeInfo.title)));
-
   array.map((x) => container.append(createCard(x)));
 };
 
