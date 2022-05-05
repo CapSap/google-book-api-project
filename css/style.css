@@ -29,18 +29,22 @@
   grid-row-end: span 2;
   width: 200px;
 }
-.card__imgTitle p {
-  margin: 0;
-  padding: 0;
+.card__title {
   font-size: 1.7em;
   font-weight: bold;
+  margin: 0;
+  padding: 0;
   grid-column-start: 2;
 }
-.card__imgTitle p + p {
+.card__authors {
+  font-size: 1.7em;
   font-weight: normal;
   font-style: italic;
+  margin: 0;
+  padding: 0;
+  grid-column-start: 2;
 }
-.card > p {
+.card__description {
   color: blue;
   font-size: 2em;
   overflow: hidden;

@@ -11,21 +11,23 @@
       grid-row-end: span 2;
       width: 200px;
     }
-    & p {
-      margin: 0;
-      padding: 0;
-      font-size: 1.7em;
-      font-weight: bold;
-      grid-column-start: 2;
-
-      & + p {
-        font-weight: normal;
-        font-style: italic;
-      }
-    }
   }
-
-  & > p {
+  &__title {
+    font-size: 1.7em;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    grid-column-start: 2;
+  }
+  &__authors {
+    font-size: 1.7em;
+    font-weight: normal;
+    font-style: italic;
+    margin: 0;
+    padding: 0;
+    grid-column-start: 2;
+  }
+  &__description {
     color: blue;
     font-size: 2em;
 
