@@ -1,6 +1,5 @@
 const container = document.querySelector("#page-container");
 
-console.log(container);
 /*
 
 // maybe this function should take in the object and generate all of the html/nodes?
@@ -9,30 +8,33 @@ console.log(container);
 
  }
  */
-const createHTML = (element, text) => {
+const createHTML = (element, text, attr) => {
   const returnElement = document.createElement(element);
   text = document.createTextNode(text);
   returnElement.appendChild(text);
 
+  for (let key in attr) {
+    returnElement[key] = attr[key];
+  }
   return returnElement;
 };
-const createCard = (object) => {
-  // creating image element
-  const imgEl = document.createElement("img");
-  const imgLink = object.volumeInfo.imageLinks.thumbnail;
-  imgEl.src = imgLink;
 
-  const cardContainer = createHTML("div", "");
-  const cardContainer__imgTitle = createHTML("div", "");
-  cardContainer__imgTitle.append(imgEl);
+const createCard = (object) => {
+  const cardContainer = createHTML("div", "", { className: "card" });
+  const cardContainer__imgTitle = createHTML("div", "", {
+    className: "card__imgTitle",
+  });
+
+  const imgEl2 = createHTML("img", undefined, {
+    src: object.volumeInfo.imageLinks.thumbnail,
+  });
+  cardContainer__imgTitle.append(imgEl2);
 
   cardContainer__imgTitle.append(createHTML("p", object.volumeInfo.title));
   cardContainer__imgTitle.append(createHTML("p", object.volumeInfo.authors));
-  cardContainer__imgTitle.className = "card__imgTitle";
   cardContainer.append(cardContainer__imgTitle);
 
   cardContainer.append(createHTML("p", object.volumeInfo.description));
-  cardContainer.className = "card";
 
   return cardContainer;
 };
