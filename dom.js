@@ -25,10 +25,12 @@ const createCard = (object) => {
     className: "card__imgTitle",
   });
 
-  const imgEl2 = createHTML("img", undefined, {
-    src: object.volumeInfo.imageLinks.thumbnail,
-  });
-  cardContainer__imgTitle.append(imgEl2);
+  //imgTitle = container for image, title and author. top half of card
+  cardContainer__imgTitle.append(
+    createHTML("img", undefined, {
+      src: object.volumeInfo.imageLinks.thumbnail,
+    })
+  );
   cardContainer__imgTitle.append(
     createHTML("p", object.volumeInfo.title, { className: "card__title" })
   );
