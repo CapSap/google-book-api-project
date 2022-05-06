@@ -18,6 +18,16 @@
     font-size: 2em;
   }
 }
+@media only screen and (max-width: 450px) {
+  .form-container__heading {
+    font-size: 2em;
+    text-align: center;
+  }
+  .form-container__para {
+    font-size: 1em;
+    text-align: center;
+  }
+}
 
 .form {
   font-size: 2em;
@@ -37,6 +47,17 @@
   }
   .form__button {
     font-size: 1.2em;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .form {
+    font-size: 1em;
+  }
+  .form__input {
+    font-size: 1em;
+  }
+  .form__button {
+    font-size: 1em;
   }
 }
 

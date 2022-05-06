@@ -18,6 +18,16 @@
       font-size: 2em;
     }
   }
+  @media only screen and (max-width: 450px) {
+    &__heading {
+      font-size: 2em;
+      text-align: center;
+    }
+    &__para {
+      font-size: 1em;
+      text-align: center;
+    }
+  }
 }
 
 .form {
@@ -35,6 +45,15 @@
     }
     &__button {
       font-size: 1.2em;
+    }
+  }
+  @media only screen and (max-width: 450px) {
+    font-size: 1em;
+    &__input {
+      font-size: 1em;
+    }
+    &__button {
+      font-size: 1em;
     }
   }
 }
