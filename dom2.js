@@ -41,6 +41,7 @@ const createCard = (object) => {
   cardContainer.append(
     createHTML("img", undefined, {
       src: defaultImage,
+      alt: "book cover",
     })
   );
   cardContainer__imgTitle.append(
