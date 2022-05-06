@@ -10,6 +10,9 @@
     object-fit: cover;
     height: 300px;
     max-width: 210px;
+    @media only screen and (max-width: 450px) {
+      display: none;
+    }
   }
 
   &__imgTitle {
