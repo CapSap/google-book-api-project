@@ -20,6 +20,7 @@
     flex-direction: column;
   }
   &__title {
+    color: palette.$title;
     font-size: 1.7em;
     font-weight: bold;
     margin: 0;
@@ -32,6 +33,7 @@
     -webkit-box-orient: vertical;
   }
   &__authors {
+    color: palette.$author;
     font-size: 1.5em;
     font-weight: normal;
     font-style: italic;

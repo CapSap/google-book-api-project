@@ -6,8 +6,10 @@
 .form-container__heading {
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 4em;
+  color: 212121;
 }
 .form-container__para {
+  color: 212121;
   font-size: 2em;
 }
 @media only screen and (max-width: 1000px) {
@@ -33,9 +35,13 @@
   font-size: 2em;
 }
 .form__input {
+  color: 212121;
   font-size: 1.5em;
 }
 .form__button {
+  color: #163172;
+  background-color: #bdbdbd;
+  border-radius: 5px;
   font-size: 1.5em;
 }
 @media only screen and (max-width: 1000px) {
@@ -63,10 +69,10 @@
 
 .card {
   display: flex;
-  border: 2px solid rgb(255, 230, 0);
+  border: 2px solid #757575;
   text-align: center;
   height: 300px;
-  background-color: aliceblue;
+  background-color: #f6f6f6;
 }
 .card img {
   object-fit: cover;
@@ -83,6 +89,7 @@
   flex-direction: column;
 }
 .card__title {
+  color: #163172;
   font-size: 1.7em;
   font-weight: bold;
   margin: 0;
@@ -95,6 +102,7 @@
   -webkit-box-orient: vertical;
 }
 .card__authors {
+  color: #163172;
   font-size: 1.5em;
   font-weight: normal;
   font-style: italic;
@@ -103,7 +111,7 @@
   overflow: hidden;
 }
 .card__description {
-  color: blue;
+  color: #1e56a0;
   padding: 0px 15px;
   margin-top: auto;
   font-size: 1.4em;
