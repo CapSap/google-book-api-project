@@ -20,10 +20,17 @@ const createHTML = (element, text, attr) => {
 };
 
 const createCard = (object) => {
-  const defaultDescription =
-    object.volumeInfo.description === undefined
-      ? "Google has no description for the book so instead I want to take advantage to advocate for nuclear power. Australia has a ban on nuclear energy so we export the raw material instead of doing anything useful with it. It is as carbon neutral as renewable energy. It is reliable source of energy which is important when contrasted with intermittent sources. Modern economies need reliable power. There is a lot more to say on this topic  "
-      : object.volumeInfo.description;
+  console.log(object);
+  const defaultDescription = object.volumeInfo.description
+    ? object.volumeInfo.description
+    : "Google has no description for the book so instead I want to take advantage to advocate for nuclear power. Australia has a ban on nuclear energy so we export the raw material instead of doing anything useful with it. It is as carbon neutral as renewable energy. It is reliable source of energy which is important when contrasted with intermittent sources. Modern economies need reliable power. There is a lot more to say on this topic  ";
+  const subHeading = object.volumeInfo.authors
+    ? object.volumeInfo.authors
+    : "Authors not found";
+
+  const defaultImage = object.volumeInfo.imageLinks
+    ? object.volumeInfo.imageLinks.thumbnail
+    : "./book-cover-placeholder.png";
 
   const cardContainer = createHTML("div", "", { className: "card" });
   const cardContainer__imgTitle = createHTML("div", "", {
@@ -33,14 +40,15 @@ const createCard = (object) => {
   //imgTitle = container for image, title and author. top half of card
   cardContainer__imgTitle.append(
     createHTML("img", undefined, {
-      src: object.volumeInfo.imageLinks.thumbnail,
+      src: defaultImage,
     })
   );
   cardContainer__imgTitle.append(
     createHTML("p", object.volumeInfo.title, { className: "card__title" })
   );
+
   cardContainer__imgTitle.append(
-    createHTML("p", object.volumeInfo.authors, { className: "card__authors" })
+    createHTML("p", subHeading, { className: "card__authors" })
   );
   cardContainer.append(cardContainer__imgTitle);
 
