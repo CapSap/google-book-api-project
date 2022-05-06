@@ -1,62 +1,51 @@
-@use "palette";
-
-.card {
+.testcard {
   display: flex;
-  border: 2px solid palette.$card-border;
+  border: 2px solid rgb(255, 230, 0);
   text-align: center;
+  // height: 600px;
+  width: 600px;
   height: 300px;
-  background-color: palette.$card-background;
+  background-color: aliceblue;
+
   & img {
     object-fit: cover;
     height: 300px;
-    max-width: 210px;
-    @media only screen and (max-width: 450px) {
-      display: none;
-    }
   }
 
   &__imgTitle {
+    width: 400px;
     display: flex;
     flex-direction: column;
   }
   &__title {
-    color: palette.$title;
     font-size: 1.7em;
     font-weight: bold;
     margin: 0;
     padding: 0;
     grid-column-start: 2;
     margin-top: auto;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
   }
   &__authors {
-    color: palette.$author;
-    font-size: 1.5em;
+    font-size: 1.7em;
     font-weight: normal;
     font-style: italic;
-    margin: 10px;
+    margin: 0;
+    padding: 10px;
     grid-column-start: 2;
-    overflow: hidden;
   }
 
   &__description {
-    color: palette.$description;
+    color: blue;
+    background-color: aliceblue;
     padding: 0px 15px;
     margin-top: auto;
     font-size: 1.4em;
     text-align: left;
-
     // how to Truncating Multiple Line Text
     //https://css-tricks.com/line-clampin/
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
-  }
-  @media only screen and (max-width: 2000px) {
-    font-size: 0.9em;
   }
 }
