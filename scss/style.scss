@@ -6,4 +6,6 @@
   display: grid;
   grid-template-columns: repeat((4, 1fr));
   font-family: "Courier New", Courier, monospace;
+  gap: 30px;
+  align-items: center;
 }
