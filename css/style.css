@@ -10,6 +10,14 @@
 .form-container__para {
   font-size: 2em;
 }
+@media only screen and (max-width: 1000px) {
+  .form-container__heading {
+    font-size: 3em;
+  }
+  .form-container__para {
+    font-size: 2em;
+  }
+}
 
 .form {
   font-size: 2em;
@@ -19,6 +27,17 @@
 }
 .form__button {
   font-size: 1.5em;
+}
+@media only screen and (max-width: 1000px) {
+  .form {
+    font-size: 1.5em;
+  }
+  .form__input {
+    font-size: 1.2em;
+  }
+  .form__button {
+    font-size: 1.2em;
+  }
 }
 
 .card {
