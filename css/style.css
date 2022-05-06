@@ -1,5 +1,7 @@
 .form-container {
   grid-column: 1/span 2;
+  display: flex;
+  flex-direction: column;
 }
 .form-container__heading {
   font-family: Georgia, "Times New Roman", Times, serif;
@@ -23,7 +25,6 @@
   display: flex;
   border: 2px solid rgb(255, 230, 0);
   text-align: center;
-  width: 600px;
   height: 300px;
   background-color: aliceblue;
 }
@@ -33,7 +34,6 @@
   max-width: 210px;
 }
 .card__imgTitle {
-  width: 400px;
   display: flex;
   flex-direction: column;
 }
@@ -44,9 +44,13 @@
   padding: 0;
   grid-column-start: 2;
   margin-top: auto;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 .card__authors {
-  font-size: 1.7em;
+  font-size: 1.5em;
   font-weight: normal;
   font-style: italic;
   margin: 10px;
@@ -63,6 +67,11 @@
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+}
+@media only screen and (max-width: 2000px) {
+  .card {
+    font-size: 0.9em;
+  }
 }
 
 .testcard {
@@ -117,6 +126,22 @@
   font-family: "Courier New", Courier, monospace;
   gap: 30px;
   align-items: center;
+}
+@media only screen and (max-width: 2000px) {
+  #page-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 1500px) {
+  #page-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #page-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
