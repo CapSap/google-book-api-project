@@ -1,16 +1,22 @@
 .card {
+  display: flex;
   border: 2px solid rgb(255, 230, 0);
   text-align: center;
   // height: 600px;
   width: 600px;
+  height: 300px;
+  background-color: aliceblue;
+
+  & img {
+    object-fit: cover;
+    height: 300px;
+    max-width: 210px;
+  }
+
   &__imgTitle {
-    display: grid;
-    grid-template-columns: 200px, 1fr;
-    font-size: 1.2em;
-    & img {
-      grid-row-end: span 2;
-      width: 200px;
-    }
+    width: 400px;
+    display: flex;
+    flex-direction: column;
   }
   &__title {
     font-size: 1.7em;
@@ -18,21 +24,23 @@
     margin: 0;
     padding: 0;
     grid-column-start: 2;
+    margin-top: auto;
   }
   &__authors {
     font-size: 1.7em;
     font-weight: normal;
     font-style: italic;
-    margin: 0;
-    padding: 0;
+    margin: 10px;
     grid-column-start: 2;
+    overflow: hidden;
   }
+
   &__description {
     color: blue;
-    font-size: 2em;
-    background-color: aliceblue;
-    padding: 0px 40px;
-    text-align: center;
+    padding: 0px 15px;
+    margin-top: auto;
+    font-size: 1.4em;
+    text-align: left;
     // how to Truncating Multiple Line Text
     //https://css-tricks.com/line-clampin/
     overflow: hidden;
