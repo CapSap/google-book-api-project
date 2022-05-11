@@ -25,7 +25,7 @@ const createCard = (object) => {
     ? object.volumeInfo.description
     : "Google has no description for this book so instead here are some facts about nuclear power: Australia has a ban on nuclear energy so instead we export the raw material instead of doing anything useful with it. Nuclear power is as carbon neutral as renewable energy. It is reliable source of energy which is important when contrasted with intermittent sources (duck curve and storage). Modern economies need reliable power. There is a lot more to say on this topic";
   const subHeading = object.volumeInfo.authors
-    ? object.volumeInfo.authors
+    ? object.volumeInfo.authors.join(", ")
     : "Authors not found";
 
   const defaultImage = object.volumeInfo.imageLinks

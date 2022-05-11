@@ -10,9 +10,6 @@
     object-fit: cover;
     height: 300px;
     max-width: 210px;
-    @media only screen and (max-width: 450px) {
-      display: none;
-    }
   }
 
   &__imgTitle {
@@ -31,6 +28,9 @@
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+    @media only screen and (max-width: 450px) {
+      margin: auto;
+    }
   }
   &__authors {
     color: palette.$author;
@@ -40,6 +40,9 @@
     margin: 10px;
     grid-column-start: 2;
     overflow: hidden;
+    @media only screen and (max-width: 450px) {
+      margin: auto;
+    }
   }
 
   &__description {
@@ -55,6 +58,9 @@
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+    @media only screen and (max-width: 450px) {
+      display: none;
+    }
   }
   @media only screen and (max-width: 2000px) {
     font-size: 0.9em;
