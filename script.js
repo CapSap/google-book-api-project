@@ -1,5 +1,5 @@
-import { makeFetchRequest } from "./api.js";
-import { insertDataIntoDom } from "./dom2.js";
+import { makeFetchRequest } from "./scripts/api.js";
+import { insertDataIntoDom } from "./scripts/dom2.js";
 
 const formElement = document.querySelector("#bookSearchForm");
 
