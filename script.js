@@ -12,5 +12,9 @@ formElement.addEventListener("submit", async (e) => {
   const data = await makeFetchRequest(userInput);
   document.querySelectorAll(".card").forEach((e) => e.remove());
 
-  insertDataIntoDom(data.items);
+  if (data.totalItems) {
+    insertDataIntoDom(data.items);
+  } else {
+    alert("No books found");
+  }
 });
